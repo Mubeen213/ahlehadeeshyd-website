@@ -1,19 +1,35 @@
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { Search, MapPin, Bookmark } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
+const sampleMosques = [
+  {
+    name: "Masjid e Rabiya (Salafi)",
+    address: "19-3-19, Jahanuma, Nawab Saheb Kunta, Hyderabad, Telangana 500053, India",
+    nextPrayer: "Maghrib",
+    prayerTime: "6:14 PM"
+  },
+  {
+    name: "Masjid E Abdur Raheem Alwari (Ahle Hadees)",
+    address: "Baba Nagar, Indira Nagar Colony, Hyderabad, Shivarampally Jagir, Telangana 500052, India",
+    nextPrayer: "Maghrib",
+    prayerTime: "6:14 PM"
+  }
+];
 
 export default function MosqueFinder() {
   return (
     <section id="mosques" className="py-24 bg-green-50">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Find Mosques Near You
@@ -21,37 +37,63 @@ export default function MosqueFinder() {
             <p className="text-lg text-gray-600 mb-8">
               Easily search for mosques in Hyderabad by name or location. Get accurate prayer times and stay updated with mosque events.
             </p>
-            
-            <Card className="p-6 max-w-md">
-              <div className="flex gap-4 mb-4">
-                <Input
-                  placeholder="Search mosques by name or area..."
-                  className="flex-1"
-                />
-                <Button>
-                  <Search className="h-4 w-4 mr-2" />
-                  Search
-                </Button>
-              </div>
-              <Button variant="outline" className="w-full">
-                Find Mosques Near Me
-              </Button>
+
+            <Card className="bg-white shadow-md">
+              <CardContent className="p-6">
+                <div className="flex gap-4 mb-4">
+                  <div className="relative flex-1">
+                    <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                    <Input
+                      placeholder="Search mosques by name or place"
+                      className="pl-10"
+                    />
+                  </div>
+                  <Button className="bg-green-100 text-primary hover:bg-green-200">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    Find Mosques Near Me
+                  </Button>
+                </div>
+              </CardContent>
             </Card>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <img
-              src="https://placehold.co/600x400/f0fdf4/1a7f37?text=Mosque+Finder+Preview"
-              alt="Mosque Finder"
-              className="rounded-lg shadow-xl"
-            />
-          </motion.div>
+          <div className="space-y-4">
+            {sampleMosques.map((mosque, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-white">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">{mosque.name}</h3>
+                        <p className="text-gray-600 text-sm flex items-center">
+                          <MapPin className="h-4 w-4 mr-2 text-gray-400" />
+                          {mosque.address}
+                        </p>
+                      </div>
+                      <Button variant="ghost" size="icon">
+                        <Bookmark className="h-5 w-5" />
+                      </Button>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg mb-4">
+                      <p className="text-sm text-gray-600">Next Prayer: {mosque.nextPrayer} at {mosque.prayerTime}</p>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <Button variant="outline">View Details</Button>
+                      <Button variant="ghost" size="icon">
+                        <MapPin className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

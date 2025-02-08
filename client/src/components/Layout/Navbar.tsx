@@ -6,24 +6,22 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center space-x-2">
-            <span className="font-bold text-xl text-primary">PrayerTrack</span>
-          </a>
+          <span className="font-bold text-xl text-primary cursor-pointer">PrayerTrack</span>
         </Link>
-        
+
         <div className="flex items-center space-x-4">
-          <Button variant="ghost" asChild>
-            <Link href="#features">Features</Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="#mosques">Mosques</Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="#duas">Duas</Link>
-          </Button>
-          <Button variant="default" asChild>
-            <a href="#download">Download App</a>
-          </Button>
+          <Link href="#features">
+            <Button variant="ghost" className="cursor-pointer">Features</Button>
+          </Link>
+          <Link href="#mosques">
+            <Button variant="ghost" className="cursor-pointer">Mosques</Button>
+          </Link>
+          <Link href="#duas">
+            <Button variant="ghost" className="cursor-pointer">Duas</Button>
+          </Link>
+          <Link href="#download">
+            <Button variant="default" className="cursor-pointer">Download App</Button>
+          </Link>
         </div>
       </div>
     </nav>
