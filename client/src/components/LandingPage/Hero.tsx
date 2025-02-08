@@ -47,14 +47,6 @@ export default function Hero() {
                     <p className="text-sm text-gray-600">February 8, 2025</p>
                   </div>
 
-                  {/* Ramadan Countdown */}
-                  <div className="bg-[#F4EEFF] p-4">
-                    <div className="flex items-center gap-2 text-purple-600">
-                      <span className="font-semibold">Ramadan</span>
-                    </div>
-                    <p className="text-lg text-purple-600">21 days until Ramadan</p>
-                  </div>
-
                   {/* Daily Verse */}
                   <div className="p-4 bg-white">
                     <p className="text-right mb-4 text-lg leading-relaxed" style={{ fontFamily: 'Traditional Arabic, serif' }}>
@@ -64,6 +56,38 @@ export default function Hero() {
                       <Button size="sm" variant="outline" className="bg-green-50">English</Button>
                       <Button size="sm" variant="outline">Urdu</Button>
                       <Button size="sm" variant="outline">Roman</Button>
+                    </div>
+                  </div>
+
+                  {/* Feature Cards */}
+                  <div className="grid grid-cols-2 gap-4 p-4">
+                    <div className="bg-green-50 p-4 rounded-lg text-center">
+                      <div className="bg-green-100 rounded-lg p-3 mb-2">
+                        <span className="text-2xl">📍</span>
+                      </div>
+                      <p className="text-sm font-medium">Mosques</p>
+                      <p className="text-xs text-gray-600">Find and track local mosques</p>
+                    </div>
+                    <div className="bg-purple-50 p-4 rounded-lg text-center">
+                      <div className="bg-purple-100 rounded-lg p-3 mb-2">
+                        <span className="text-2xl">📖</span>
+                      </div>
+                      <p className="text-sm font-medium">Duas</p>
+                      <p className="text-xs text-gray-600">Learn & Memorize Quranic Duas</p>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-lg text-center">
+                      <div className="bg-blue-100 rounded-lg p-3 mb-2">
+                        <span className="text-2xl">📅</span>
+                      </div>
+                      <p className="text-sm font-medium">Events</p>
+                      <p className="text-xs text-gray-600">Discover Islamic programs</p>
+                    </div>
+                    <div className="bg-pink-50 p-4 rounded-lg text-center">
+                      <div className="bg-pink-100 rounded-lg p-3 mb-2">
+                        <span className="text-2xl">⭐</span>
+                      </div>
+                      <p className="text-sm font-medium">Favorites</p>
+                      <p className="text-xs text-gray-600">Your saved mosques</p>
                     </div>
                   </div>
                 </div>
