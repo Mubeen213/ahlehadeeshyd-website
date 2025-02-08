@@ -1,29 +1,33 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-
-export default function Navbar() {
+import { Button } from '@/components/ui/button'
+import { Link } from 'wouter'
+const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm border-b">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/">
-          <span className="font-bold text-xl text-primary cursor-pointer">PrayerTrack</span>
-        </Link>
+    <nav className='bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between h-16'>
+          {/* Logo/Brand */}
+          <div className='flex-shrink-0'>
+            <Link href='/'>
+              <span className='text-xl font-bold text-primary hover:opacity-90 transition-opacity'>
+                PrayerTrack
+              </span>
+            </Link>
+          </div>
 
-        <div className="flex items-center space-x-4">
-          <Link href="#features">
-            <Button variant="ghost" className="cursor-pointer">Features</Button>
-          </Link>
-          <Link href="#mosques">
-            <Button variant="ghost" className="cursor-pointer">Mosques</Button>
-          </Link>
-          <Link href="#duas">
-            <Button variant="ghost" className="cursor-pointer">Duas</Button>
-          </Link>
-          <a href="https://app.ahlehadeeshyd.com/" target="_blank" rel="noopener noreferrer">
-            <Button variant="default" className="cursor-pointer">Login to App</Button>
-          </a>
+          {/* Login Button */}
+          <Button size='sm' className='rounded-full shadow-sm' asChild>
+            <a
+              href='https://app.ahlehadeeshyd.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Login to App
+            </a>
+          </Button>
         </div>
       </div>
     </nav>
-  );
+  )
 }
+
+export default Navbar
