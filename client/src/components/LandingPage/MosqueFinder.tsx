@@ -35,7 +35,7 @@ export default function MosqueFinder() {
               Find Mosques Near You
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Easily search for mosques in Hyderabad by name or location. Get accurate prayer times and stay updated with mosque events.
+              Preview our mosque search functionality. The full feature is available in the web application at <a href="https://app.ahlehadeeshyd.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">app.ahlehadeeshyd.com</a>
             </p>
 
             <Card className="bg-white shadow-md">
@@ -46,12 +46,15 @@ export default function MosqueFinder() {
                     <Input
                       placeholder="Search mosques by name or place"
                       className="pl-10"
+                      disabled
                     />
                   </div>
-                  <Button className="bg-green-100 text-primary hover:bg-green-200">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    Find Mosques Near Me
-                  </Button>
+                  <a href="https://app.ahlehadeeshyd.com" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-green-100 text-primary hover:bg-green-200">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      Open Web App
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -76,7 +79,7 @@ export default function MosqueFinder() {
                           {mosque.address}
                         </p>
                       </div>
-                      <Button variant="ghost" size="icon">
+                      <Button variant="ghost" size="icon" disabled>
                         <Bookmark className="h-5 w-5" />
                       </Button>
                     </div>
@@ -84,8 +87,10 @@ export default function MosqueFinder() {
                       <p className="text-sm text-gray-600">Next Prayer: {mosque.nextPrayer} at {mosque.prayerTime}</p>
                     </div>
                     <div className="flex justify-between items-center">
-                      <Button variant="outline">View Details</Button>
-                      <Button variant="ghost" size="icon">
+                      <a href="https://app.ahlehadeeshyd.com" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline">Open in Web App</Button>
+                      </a>
+                      <Button variant="ghost" size="icon" disabled>
                         <MapPin className="h-5 w-5" />
                       </Button>
                     </div>

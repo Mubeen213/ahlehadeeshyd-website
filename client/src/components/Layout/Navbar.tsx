@@ -19,9 +19,9 @@ export default function Navbar() {
           <Link href="#duas">
             <Button variant="ghost" className="cursor-pointer">Duas</Button>
           </Link>
-          <Link href="#download">
-            <Button variant="default" className="cursor-pointer">Download App</Button>
-          </Link>
+          <a href="https://app.ahlehadeeshyd.com/" target="_blank" rel="noopener noreferrer">
+            <Button variant="default" className="cursor-pointer">Login to App</Button>
+          </a>
         </div>
       </div>
     </nav>

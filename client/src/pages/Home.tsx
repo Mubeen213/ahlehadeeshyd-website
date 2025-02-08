@@ -3,7 +3,6 @@ import Features from "@/components/LandingPage/Features";
 import MosqueFinder from "@/components/LandingPage/MosqueFinder";
 import PrayerTimes from "@/components/LandingPage/PrayerTimes";
 import DailyVerse from "@/components/LandingPage/DailyVerse";
-import DownloadCTA from "@/components/LandingPage/DownloadCTA";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <MosqueFinder />
       <PrayerTimes />
       <DailyVerse />
-      <DownloadCTA />
     </main>
   );
 }
