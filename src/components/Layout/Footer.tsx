@@ -20,7 +20,7 @@ export default function Footer() {
                   href='mailto:info@ahlehadeeshyd.org'
                   className='hover:text-white'
                 >
-                  info@ahlehadeeshyd.org
+                  info@ahlehadeeshyd.com
                 </a>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           {/* Follow us */}
-          <div>
+          {/* <div>
             <h3 className='font-semibold text-white mb-4'>Follow us</h3>
             <a
               href='https://youtube.com'
@@ -67,7 +67,7 @@ export default function Footer() {
               <Youtube className='h-5 w-5 text-green-500' />
               Youtube
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
