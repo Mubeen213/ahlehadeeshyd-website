@@ -12,7 +12,9 @@ export default function Footer() {
             <div className='space-y-3'>
               <div className='flex items-start gap-3'>
                 <MapPin className='h-5 w-5 text-green-500 mt-1' />
-                <span>Langer House, Hyderabad</span>
+                <span>
+                  Masjid-E-Mohammadia Langer House, Langer House, Hyderabad
+                </span>
               </div>
               <div className='flex items-center gap-3'>
                 <Mail className='h-5 w-5 text-green-500' />
@@ -20,7 +22,7 @@ export default function Footer() {
                   href='mailto:info@ahlehadeeshyd.org'
                   className='hover:text-white'
                 >
-                  info@ahlehadeeshyd.com
+                  dev@ahlehadeeshyd.com
                 </a>
               </div>
             </div>

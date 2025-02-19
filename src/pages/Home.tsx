@@ -1,17 +1,10 @@
-import Hero from '@/components/LandingPage/Hero'
-import Features from '@/components/LandingPage/Features'
-import MosqueFinder from '@/components/LandingPage/MosqueFinder'
-import PrayerTimes from '@/components/LandingPage/PrayerTimes'
-import DailyVerse from '@/components/LandingPage/DailyVerse'
+// import React from 'react'
+// import Application from '@/components/ApplicationDesPage/Application'
 
-export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <Features />
-      <MosqueFinder />
-      <PrayerTimes />
-      <DailyVerse />
-    </main>
-  )
-}
+// export default function Home() {
+//   return (
+//     <main>
+//       <ApplicaitonLayout />
+//     </main>
+//   )
+// }
