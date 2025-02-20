@@ -6,6 +6,15 @@ export default function DailyVerse() {
   return (
     <section id='duas' className='py-24 bg-green-50'>
       <div className='container mx-auto px-4'>
+        <div className='text-center mb-16'>
+          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+            Get Daily Verses
+          </h2>
+          <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+            Start your day with a verse from the Quran to keep you motivated and
+            inspired.
+          </p>
+        </div>
         <div className='max-w-3xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

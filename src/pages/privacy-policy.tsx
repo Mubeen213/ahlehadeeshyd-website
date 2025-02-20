@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please
                 contact us at:
               </p>
-              <p>Email: info@ahlehadeeshyd.com</p>
+              <p>Email: dev@ahlehadeeshyd.com</p>
             </div>
           </CardContent>
         </Card>
