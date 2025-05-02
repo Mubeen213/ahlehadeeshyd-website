@@ -1,9 +1,9 @@
 import React from 'react';
-import image1 from '../../../public/assets/programs/image1.jpeg';
-import image2 from '../../../public/assets/programs/image2.jpeg';
-import image3 from '../../../public/assets/programs/image3.jpeg';
-import image4 from '../../../public/assets/programs/image4.jpeg';
-import image5 from '../../../public/assets/programs/image5.jpeg';
+import image1 from '../../assets/programs/image1.jpeg';
+import image2 from '../../assets/programs/image2.jpeg';
+import image3 from '../../assets/programs/image3.jpeg';
+import image4 from '../../assets/programs/image4.jpeg';
+import image5 from '../../assets/programs/image5.jpeg';
 
 interface ImageItem {
   src: any; // Using 'any' here because imported images are webpack objects

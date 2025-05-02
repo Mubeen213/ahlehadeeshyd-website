@@ -54,7 +54,7 @@ export default function TermsOfService() {
 
               <h2 className='text-xl font-semibold mt-8 mb-4'>6. Contact</h2>
               <p>For any questions about these Terms, please contact us at:</p>
-              <p>Email: dev@ahlehadeeshyd.com</p>
+              <p>Email: jamiateahlehadeeshyd@gmail.com</p>
             </div>
           </CardContent>
         </Card>
