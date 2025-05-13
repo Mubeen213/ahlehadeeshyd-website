@@ -24,7 +24,9 @@ const Navbar = () => {
             <Button variant='ghost' size='sm' className='rounded-full' asChild>
               <Link href='/application'>About App</Link>
             </Button>
-
+            <Button variant='ghost' size='sm' className='rounded-full' asChild>
+              <Link href='/gallery'>Gallery</Link>
+            </Button>
             <Button size='sm' className='rounded-full shadow-sm' asChild>
               <a
                 href='https://app.ahlehadeeshyd.com/'

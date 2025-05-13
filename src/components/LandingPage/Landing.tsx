@@ -1,6 +1,9 @@
 import { content } from '@/data/intro'
 import { motion } from 'framer-motion'
 
+import bailUlMaalScanner from '../../assets/donation-qr-codes/bait-ul-maal-scanner.jpeg'
+import jamiatScanner from '../../assets/donation-qr-codes/jamiat-scanner.jpg'
+
 export default function Landing() {
   return (
     <div className='min-h-screen'>
@@ -136,7 +139,73 @@ export default function Landing() {
             ))}
           </div>
         </div>
+
       </section>
+        {/* Donation section */}
+     
+{/* Donation section */}
+<section className='py-16 bg-gray-50'>
+  <div className='container mx-auto px-4'>
+    <div className='flex justify-center mb-6'>
+      <content.donation.icon className='h-12 w-12 text-primary/80' />
+    </div>
+    <h2 className='text-3xl font-bold text-center mb-4'>
+      {content.donation.title}
+    </h2>
+    <p className='text-lg text-center mb-12'>
+      {content.donation.description}
+    </p>
+    
+    <div className='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+    
+    {/* Jamiat Account Details */}
+    <div className='bg-white p-6 rounded-lg shadow'>
+      <h3 className='text-2xl font-semibold text-primary mb-4 text-center'>Jamiat Account</h3>
+      <div className='space-y-3 mb-6'>
+        {(content.donation?.bankDetials?.[0]?.Jamiat ?? []).map((detail, index) => (
+          <div key={index} className='flex justify-between'>
+            <span className='font-medium'>{detail.title}:</span>
+            <span className='text-muted-foreground'>{detail.value}</span>
+          </div>
+        ))}
+      </div>
+      <div className='flex flex-col items-center mt-6'>
+        <p className='text-sm text-muted-foreground mb-3'>Scan to donate</p>
+        <div className='p-3 bg-white border-2 border-green-100 rounded-lg shadow-sm'>
+          <img 
+            src={jamiatScanner} 
+            alt="Jamiat QR Code" 
+            className='w-74 h-74 object-contain' 
+          />
+        </div>
+      </div>
+    </div>
+    
+    {/* Bait Ul Maal Account Details */}
+    <div className='bg-white p-6 rounded-lg shadow'>
+      <h3 className='text-2xl font-semibold text-primary mb-4 text-center'>Jamiat Bait Ul Maal</h3>
+      <div className='space-y-3 mb-6'>
+        {(content.donation?.bankDetials?.[1].BaitUlMaal ?? []).map((detail, index) => (
+          <div key={index} className='flex justify-between'>
+            <span className='font-medium'>{detail.title}:</span>
+            <span className='text-muted-foreground'>{detail.value}</span>
+          </div>
+        ))}
+      </div>
+      <div className='flex flex-col items-center mt-6'>
+        <p className='text-sm text-muted-foreground mb-3'>Scan to donate</p>
+        <div className='p-3 bg-white border-2 border-green-100 rounded-lg shadow-sm'>
+          <img 
+            src={bailUlMaalScanner} 
+            alt="Bait Ul Maal QR Code" 
+            className='w-74 h-74 object-contain' 
+          />
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
     </div>
   )
 }
