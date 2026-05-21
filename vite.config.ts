@@ -18,6 +18,11 @@ export default defineConfig({
   ],
   server: {
     proxy: {
+      '/api/social/twitter-syndication': {
+        target: 'https://cdn.syndication.twimg.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/social\/twitter-syndication/, ''),
+      },
       '/api/social/instagram-embed': {
         target: 'https://www.instagram.com',
         changeOrigin: true,

@@ -15,7 +15,7 @@ export const SOCIAL_MEDIA = {
   twitter: {
     handle: 'Jahhydsec_2004',
     url: 'https://x.com/Jahhydsec_2004',
-    timelineUrl: 'https://twitter.com/Jahhydsec_2004',
+    timelineUrl: 'https://x.com/Jahhydsec_2004',
   },
   facebook: {
     pageId: 'JamiatAhlehadeesOfficialHydSec',

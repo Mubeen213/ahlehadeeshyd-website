@@ -51,7 +51,7 @@ export function FacebookPostsSection() {
     <div ref={ref} className='mb-14 max-w-full overflow-hidden'>
       <SectionHeading
         icon={Facebook}
-        title='Facebook Posts & Videos'
+        title='Facebook'
         description='Updates from our official Facebook page'
         href={SOCIAL_MEDIA.facebook.pageUrl}
       />

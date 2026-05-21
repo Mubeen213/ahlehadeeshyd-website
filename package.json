@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && NODE_ENV=production vite build --mode production",
+    "build": "tsc -b && vite build --mode production",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
     "sync:facebook": "node scripts/sync-facebook-posts.mjs"

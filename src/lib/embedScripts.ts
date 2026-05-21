@@ -8,6 +8,11 @@ declare global {
     twttr?: {
       widgets: {
         load: (element?: HTMLElement) => void
+        createTimeline: (
+          dataSource: { sourceType: 'profile' | 'list'; screenName?: string },
+          targetEl: HTMLElement,
+          options?: Record<string, unknown>
+        ) => Promise<unknown>
       }
     }
   }

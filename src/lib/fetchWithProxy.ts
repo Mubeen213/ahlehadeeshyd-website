@@ -3,6 +3,10 @@ function localDevProxy(url: string): string | null {
   const host = window.location.hostname
   if (host !== 'localhost' && host !== '127.0.0.1') return null
 
+  if (url.includes('cdn.syndication.twimg.com/timeline/profile')) {
+    const params = url.substring(url.indexOf('?'))
+    return `${window.location.origin}/api/social/twitter-syndication${params}`
+  }
   if (url.includes('instagram.com') && url.includes('/embed')) {
     return `${window.location.origin}/api/social/instagram-embed`
   }
