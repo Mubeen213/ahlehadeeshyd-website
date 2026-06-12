@@ -1,7 +1,6 @@
 import { Share2 } from 'lucide-react'
 import { FacebookPostsSection } from './FacebookPostsSection'
 import { InstagramReelsSection } from './InstagramReelsSection'
-import { TwitterFeed } from './TwitterFeed'
 import { useSocialPrefetch } from './useSocialPrefetch'
 import { YouTubeShortsSection } from './YouTubeShortsSection'
 import { YouTubeVideosSection } from './YouTubeVideosSection'
@@ -34,7 +33,6 @@ export default function SocialMediaUpdates() {
         <YouTubeShortsSection />
         <YouTubeVideosSection />
         <FacebookPostsSection />
-        <TwitterFeed />
       </div>
     </section>
   )
