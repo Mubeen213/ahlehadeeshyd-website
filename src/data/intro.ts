@@ -12,6 +12,7 @@ import {
   Shield,
 } from 'lucide-react'
 
+
 export const content = {
   hero: {
     title: 'Jamiat Ahle Hadees Hyderabad & Secunderabad',
@@ -101,4 +102,60 @@ export const content = {
       },
     ],
   },
+  donation: {
+    title: 'Support Our Mission',
+    description:
+      'Your contributions help us in our mission to spread the teachings of Islam and support the community.',
+    icon: Heart,
+    buttonText: 'Donate Now',
+    bankDetials: [ {
+      Jamiat: [
+        {
+          title: 'Bank Name',
+          value: 'State Bank of India',
+        },
+        {
+          title: 'Account Name',
+          value: 'JAMIAT AHLE HADEES'
+        },
+        {
+          title: 'Account Number',
+          value: '36071589507',
+        },
+        {
+          title: 'IFSC Code',
+          value: 'SBIN0003609',
+        },
+        {
+          title: 'Branch',
+          value: 'LANGER HOUSE',
+        }
+      ]
+    },
+    {
+      BaitUlMaal: [
+        {
+          title: 'Bank Name',
+          value: 'Union Bank Of India',
+        },
+        {
+          title: 'Account Name',
+          value: 'JAMIAT AHLE HADEES'
+        },
+        {
+          title: 'Account Number',
+          value: '510101002161371',
+        },
+        {
+          title: 'IFSC Code',
+          value: 'UBIN0805211',
+        },
+        {
+          title: 'Branch',
+          value: 'SAIDABAD',
+        }
+      ]
+    }
+    ]
+  }
 }

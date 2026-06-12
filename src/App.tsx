@@ -7,8 +7,10 @@ import PrivacyPolicy from '@/pages/privacy-policy'
 import TermsOfService from '@/pages/terms-of-service'
 import Navbar from '@/components/Layout/Navbar'
 import Footer from '@/components/Layout/Footer'
+import SocialMediaUpdates from '@/components/SocialMediaUpdates/SocialMediaUpdates'
 import Landing from './components/LandingPage/Landing'
 import Applicaiton from './components/ApplicationDesPage/Application'
+import Photos from './components/Gallery/Phots'
 
 function Router() {
   return (
@@ -17,6 +19,7 @@ function Router() {
       <Route path='/application' component={Applicaiton} />
       <Route path='/privacy-policy' component={PrivacyPolicy} />
       <Route path='/terms-of-service' component={TermsOfService} />
+      <Route path='/gallery' component={Photos}/>
       <Route component={NotFound} />
     </Switch>
   )
@@ -25,8 +28,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <div id='fb-root' />
       <Navbar />
       <Router />
+      <SocialMediaUpdates />
       <Footer />
       <Toaster />
     </QueryClientProvider>
